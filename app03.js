@@ -9,9 +9,10 @@ let answer = num1 + num2;
 
 rl.question(`What is ${num1} + ${num2}? \n`, (userInput) => {
   if (userInput.trim() == answer) {
-    console.log("Correct!");
-  } else {
-    console.log("Wrong");
+    rl.close();
   }
-  rl.close();
+});
+
+rl.on("close", () => {
+  console.log("Correct!!!!!");
 });
