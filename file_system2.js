@@ -6,8 +6,19 @@ const fs = require("fs");
 //   else console.log("Folder successfully created");
 // });
 
-// delete folder
-fs.rmdir("tutorial", (err) => {
+// // delete folder
+// fs.rmdir("tutorial", (err) => {
+//   if (err) console.log(err);
+//   else console.log("Folder deleted succesfully");
+// });
+
+// create folder and file inside
+fs.mkdir("tutorial", (err) => {
   if (err) console.log(err);
-  else console.log("Folder deleted succesfully");
+  else {
+    fs.writeFile("./tutorial/example.txt", "123", (err) => {
+      if (err) console.log(err);
+      else console.log("Succesfully created folder and file");
+    });
+  }
 });
