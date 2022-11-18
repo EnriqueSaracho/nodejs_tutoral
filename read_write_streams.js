@@ -8,6 +8,9 @@ const readStream = fs.createReadStream("./example.txt", "utf8");
 
 // write file
 const writeStream = fs.createWriteStream("./example2.txt");
-readStream.on("data", (chunk) => {
-  writeStream.write(chunk);
-});
+// readStream.on("data", (chunk) => {
+//   writeStream.write(chunk);
+// });
+
+// Do the same with pipe
+readStream.pipe(writeStream);
