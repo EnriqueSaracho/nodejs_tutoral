@@ -23,13 +23,19 @@ const fs = require("fs");
 //   }
 // });
 
-// delete file and then folder (has to be in that order)
-fs.unlink("./tutorial/example.txt", (err) => {
+// // delete file and then folder (has to be in that order)
+// fs.unlink("./tutorial/example.txt", (err) => {
+//   if (err) console.log(err);
+//   else {
+//     fs.rmdir("tutorial", (err) => {
+//       if (err) console.log(err);
+//       else console.log("File and folder deleted successfully");
+//     });
+//   }
+// });
+
+// read files
+fs.readdir("example", (err, files) => {
   if (err) console.log(err);
-  else {
-    fs.rmdir("tutorial", (err) => {
-      if (err) console.log(err);
-      else console.log("File and folder deleted successfully");
-    });
-  }
+  else console.log(files);
 });
