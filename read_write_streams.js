@@ -12,5 +12,5 @@ const writeStream = fs.createWriteStream("./example2.txt");
 //   writeStream.write(chunk);
 // });
 
-// Do the same with pipe
+// Do the same but with pipe
 readStream.pipe(writeStream);
