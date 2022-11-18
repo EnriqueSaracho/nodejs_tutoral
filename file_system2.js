@@ -34,8 +34,21 @@ const fs = require("fs");
 //   }
 // });
 
-// read files
+// // read files
+// fs.readdir("example", (err, files) => {
+//   if (err) console.log(err);
+//   else console.log(files);
+// });
+
+// read and delete files
 fs.readdir("example", (err, files) => {
   if (err) console.log(err);
-  else console.log(files);
+  else {
+    for (let file of files) {
+      fs.unlink("./example/" + file, (err) => {
+        if (err) console.log(err);
+        else console.log("File deleted successfully");
+      });
+    }
+  }
 });
