@@ -1,3 +1,4 @@
+// File system module
 const fs = require("fs");
 
 // // create a file
@@ -25,6 +26,7 @@ const fs = require("fs");
 //   else console.log("Successfully appended data to file");
 // });
 
+// delete file
 fs.unlink("example2.txt", (err) => {
   if (err) console.log(err);
   else console.log("Successfully deleted file");
