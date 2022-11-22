@@ -1,3 +1,4 @@
+// Static files
 const http = require("http");
 const fs = require("fs");
 http
@@ -7,3 +8,6 @@ http
     readStream.pipe(res);
   })
   .listen(3000);
+
+  // On cmd write: static_files.js
+  // On browser write: localhost:3000
